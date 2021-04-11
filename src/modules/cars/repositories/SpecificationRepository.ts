@@ -1,0 +1,3 @@
+class SpecificationRepository implements ISpecificationRepository {
+
+}
