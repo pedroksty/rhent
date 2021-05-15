@@ -15,8 +15,6 @@ class CategoriesRepository {
       CategoriesRepository.INSTANCE = new CategoriesRepository()
     }
 
-    console.log('rea')
-
     return CategoriesRepository.INSTANCE
   }
 
