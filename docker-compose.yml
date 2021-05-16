@@ -8,3 +8,4 @@ services:
       - 4444:4444
     volumes:
       - .:/usr/app
+    network_mode: host

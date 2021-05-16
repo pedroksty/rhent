@@ -1,0 +1,13 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "username": "postgres",
+  "password": "docker",
+  "database": "rentails",
+  "port": "5432",
+  "entities": ["./src/modules/cars/entities/*.ts"],
+  "migrations": ["./src/database/migrations/*.ts"],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
+}
