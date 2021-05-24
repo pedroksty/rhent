@@ -22,7 +22,9 @@
     "@utils/*": ["utils/*"],
     "@models/*": ["models/*"],
     "@repositories/*": ["repositories/*"],
-    "@errors/*": ["errors/*"]
+    "@errors/*": ["errors/*"],
+    "@middlewares/*": ["middlewares/*"]
+
 
   }
 },

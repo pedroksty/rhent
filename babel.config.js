@@ -21,9 +21,8 @@ module.exports = {
         '@shared': './src/shared',
         '@models': './src/models',
         '@repositories': './src/repositories',
-        '@errors': './src/errors'
-
-
+        '@errors': './src/errors',
+        '@middlewares': './src/middlewares'
       }
     }]
   ],
