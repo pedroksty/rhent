@@ -20,7 +20,8 @@ module.exports = {
         '@modules': './src/modules',
         '@shared': './src/shared',
         '@models': './src/models',
-        '@repositories': './src/repositories'
+        '@repositories': './src/repositories',
+        '@errors': './src/errors'
 
 
       }
