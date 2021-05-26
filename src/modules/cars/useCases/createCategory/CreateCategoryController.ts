@@ -14,8 +14,6 @@ class CreateCategoryController {
       description
     })
 
-    console.log('handle23')
-
     return response.status(201).send()
   }
 }
