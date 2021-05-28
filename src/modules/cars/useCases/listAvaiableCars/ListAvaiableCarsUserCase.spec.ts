@@ -77,6 +77,6 @@ describe('ListAvaiable Cars', () => {
       category_id: '12345'
     })
 
-    expect(cars).toEqual(car)
+    expect(cars).toEqual([car])
   })
 })
