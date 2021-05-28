@@ -11,7 +11,8 @@
     "migrate:dev": "prisma migrate dev --preview-feature",
     "migrate:deploy": "prisma migrate deploy --preview-feature",
     "test": "jest",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
+    "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
