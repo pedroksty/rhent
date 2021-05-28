@@ -1,5 +1,5 @@
 import swaggerUI from 'swagger-ui-express'
-import './shared/infra/typeorm'
+import createConnection from './shared/infra/typeorm'
 import express, { NextFunction, Request, Response } from 'express'
 import 'express-async-errors'
 import cors from 'cors'
@@ -10,6 +10,7 @@ import { AppError } from '@shared/errors/AppError'
 import swaggerFile from './swagger.json'
 import { router } from './shared/infra/http/routes'
 
+createConnection()
 const app = express()
 
 app.use(cors())
@@ -24,6 +25,8 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
       mesage: err.message
     })
   }
+
+  console.log(err)
 
   return response.status(500).json({
     status: 'error',
