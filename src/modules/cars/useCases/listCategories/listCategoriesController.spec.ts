@@ -8,7 +8,7 @@ import createConnection from '@shared/infra/typeorm/index'
 
 let connection: Connection
 describe(('List categories'), () => {
-  beforeEach(async () => {
+  beforeAll(async () => {
     connection = await createConnection()
     await connection.runMigrations()
 
@@ -22,7 +22,7 @@ describe(('List categories'), () => {
     )
   })
 
-  afterEach(async () => {
+  afterAll(async () => {
     await connection.dropDatabase()
     await connection.close()
   })
