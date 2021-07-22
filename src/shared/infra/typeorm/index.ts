@@ -5,7 +5,7 @@ export default async (): Promise<Connection> => {
 
   return createConnection(
     Object.assign(defaultOptions, {
-      database: process.env.NODE_ENV === 'development' ? 'rentails' : 'rentails'
+      database: process.env.NODE_ENV === 'development' ? 'test_rentails' : 'test_rentails'
     })
   )
 }

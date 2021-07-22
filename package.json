@@ -10,7 +10,7 @@
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify --trace-warnings --exit-child src/server.ts",
     "migrate:dev": "prisma migrate dev --preview-feature",
     "migrate:deploy": "prisma migrate deploy --preview-feature",
-    "test": "NODE_ENV=development jest",
+    "test": "NODE_ENV=development jest --runInBand",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
     "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
   },
