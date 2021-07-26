@@ -2,7 +2,10 @@ import { Connection, createConnection, getConnection, getConnectionOptions } fro
 
 export default async (): Promise<Connection> => {
   const defaultOptions = await getConnectionOptions()
+
   return createConnection(
-    Object.assign(defaultOptions)
+    Object.assign(defaultOptions, {
+      database: process.env.NODE_ENV === 'development' ? 'test_rentails' : 'test_rentails'
+    })
   )
 }

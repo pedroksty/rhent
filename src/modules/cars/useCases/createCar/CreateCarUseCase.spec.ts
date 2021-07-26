@@ -45,7 +45,7 @@ describe('Create Car', () => {
       fine_amount: 60,
       brand: 'Brand car',
       category_id: 'category'
-    })).rejects.toBeInstanceOf(AppError)
+    })).rejects.toEqual(new AppError('Car already exists'))
   })
 
   it('Should be able to create a car with available true by default', async () => {

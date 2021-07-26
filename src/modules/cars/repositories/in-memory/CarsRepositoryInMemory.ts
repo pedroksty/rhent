@@ -4,6 +4,7 @@ import { Car } from '@modules/cars/infra/typeorm/entities/Car'
 import { ICarsRepository } from '../ICarsRepository'
 
 class CarsRepositoryInMemory implements ICarsRepository {
+
   cars: Car[] = []
 
   async findById(carId: string): Promise<Car> {
@@ -14,8 +15,8 @@ class CarsRepositoryInMemory implements ICarsRepository {
     const cars = this.cars
       .filter(car => {
         if (car.available === true || ((brand && car.brand === brand) ||
-        (category_id && car.category_id === category_id) ||
-        (name && car.name === name))) {
+          (category_id && car.category_id === category_id) ||
+          (name && car.name === name))) {
           return car
         }
 
@@ -45,7 +46,13 @@ class CarsRepositoryInMemory implements ICarsRepository {
 
     this.cars.push(car)
 
+
     return car
+  }
+
+  async updateAvaiable(id: string, available: boolean): Promise<void> {
+    const findIndex = this.cars.findIndex(car => car.id === id)
+    this.cars[findIndex].available = available
   }
 }
 
